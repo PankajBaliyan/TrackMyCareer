@@ -3,7 +3,7 @@ body {
     width: 100%;
     height: 100vh;
     font-family: Roboto, Helvetica, Arial, sans-serif;
-    background-image: url(https://foton.qodeinteractive.com/wp-content/uploads/2018/06/h-tech-background.jpg) !important;
+    background-image: url(/Assets/images/h-tech-background.jpg) !important;
     background-repeat: no-repeat !important;
     background-position: center 0 !important;
     background-size: cover !important;
@@ -17,7 +17,7 @@ body {
 }
 
 .btn-primary {
-    background-color: #77368E !important;
+    background-color: #77368e !important;
 }
 
 .fa-arrow-right {
@@ -25,7 +25,7 @@ body {
 }
 
 .default-color {
-    color: #77368E !important;
+    color: #77368e !important;
 }
 
 /* Styles required only for the example above */
@@ -44,4 +44,9 @@ body {
     /* Set width to 25% for 4 div's in each row */
     box-sizing: border-box;
     padding: 10px;
+}
+
+.nav-active > a {
+    text-decoration: underline !important;
+    font-weight: bold !important;
 }

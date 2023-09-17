@@ -1,0 +1,47 @@
+.contact-details,
+.social-links {
+    padding-left: 0 !important;
+}
+
+.contact-area .input-group p {
+    width: 100%;
+}
+
+.contact-area .contact-form form .input-group + .input-group {
+    margin-top: -3px;
+}
+
+.service-area .elementor-widget-container {
+    height: 100%;
+}
+
+.service-area .info-box.about-contact-box {
+    padding-bottom: 58px;
+}
+
+.margin-0,
+.margin-0 .elementor-widget-wrap {
+    margin: 0 !important;
+}
+
+.header-area {
+    margin-top: 12px;
+}
+
+.contact-area .contact-infos .contact-details li .right h4 {
+    opacity: 0.9;
+}
+
+.imgauto {
+    border-radius: 20px !important;
+    width: 224px !important;
+    height: 126px !important;
+}
+
+.about-details-inner {
+    padding: 85px 29px 30px;
+}
+.right > span {
+    color: #000 !important;
+    text-decoration: underline;
+}

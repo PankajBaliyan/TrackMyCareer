@@ -1,10 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
+    const location = useLocation();
+    const [isNavCollapsed, setIsNavCollapsed] = useState(
+        location.pathname === '/',
+    );
+
+    useEffect(() => {
+        setIsNavCollapsed(location.pathname === '/');
+    }, [location]);
+
     return (
         <section className="ftco-section">
-            <div className="container">
+            <div
+                className="container"
+                style={{ display: isNavCollapsed === true ? 'block' : 'none' }}
+            >
                 <div className="row justify-content-center">
                     <div className="col-md-6 text-center mb-1-5">
                         <h2 className="heading-section">
@@ -76,7 +88,7 @@ function Header() {
                                 width="350"
                                 height="30"
                                 viewBox="0 0 350 41.812430399876426"
-                                class="css-1j8o68f"
+                                className="css-1j8o68f"
                             >
                                 <defs id="SvgjsDefs1988"></defs>
                                 <g
@@ -100,20 +112,53 @@ function Header() {
                         >
                             <span className="fa fa-bars"></span> Menu
                         </button>
-                        <div className="collapse navbar-collapse justify-content-center" id="ftco-nav">
+                        <div
+                            className="collapse navbar-collapse justify-content-center"
+                            id="ftco-nav"
+                        >
                             <ul className="navbar-nav mr-md-3">
-                                <li className="nav-item active">
-                                    <Link to="/" className="nav-link">
+                                <li
+                                    className={
+                                        location.pathname === '/'
+                                            ? 'nav-item nav-active'
+                                            : 'nav-item'
+                                    }
+                                >
+                                    <Link
+                                        to="/"
+                                        id="home-nav"
+                                        className="nav-link"
+                                    >
                                         Home
                                     </Link>
                                 </li>
-                                <li className="nav-item">
-                                    <Link to="/aitools" className="nav-link">
+                                <li
+                                    className={
+                                        location.pathname === '/aiTools'
+                                            ? 'nav-item nav-active'
+                                            : 'nav-item'
+                                    }
+                                >
+                                    <Link
+                                        to="/aiTools"
+                                        id="aitools-nav"
+                                        className="nav-link"
+                                    >
                                         AI Tools
                                     </Link>
                                 </li>
-                                <li className="nav-item">
-                                    <Link to="/contact" className="nav-link">
+                                <li
+                                    className={
+                                        location.pathname === '/contact'
+                                            ? 'nav-item nav-active'
+                                            : 'nav-item'
+                                    }
+                                >
+                                    <Link
+                                        to="/contact"
+                                        id="contact-nav"
+                                        className="nav-link"
+                                    >
                                         Contact
                                     </Link>
                                 </li>
@@ -121,7 +166,10 @@ function Header() {
                         </div>
                         <div className="nav-item d-md-flex align-items-center">
                             <Link to="/">
-                                <button type="button" class="btn btn-primary">
+                                <button
+                                    type="button"
+                                    className="btn btn-primary"
+                                >
                                     Go to app
                                     <i className="fa fa-arrow-right ps-2"></i>
                                 </button>
