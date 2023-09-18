@@ -9,6 +9,7 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
+    const currentYear = new Date().getFullYear(); // Get the current year
     return (
         <MDBFooter
             bgColor="light"
@@ -49,9 +50,10 @@ export default function Footer() {
                                 TrackMyCareer.ai
                             </h6>
                             <p>
-                                Here you can use rows and columns to organize
-                                your footer content. Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit.
+                                TrackMyCareer.ai streamlines job search and
+                                application management, helping you succeed in
+                                your career journey. Elevate your job hunt with
+                                our powerful tools..
                             </p>
                         </MDBCol>
 
@@ -60,8 +62,11 @@ export default function Footer() {
                                 Products
                             </h6>
                             <p>
-                                <Link to="#!" className="text-reset">
-                                    Angular
+                                <Link
+                                    to="/applicationTracker"
+                                    className="text-reset"
+                                >
+                                    Job Application's Tracker
                                 </Link>
                             </p>
                             <p>
@@ -122,7 +127,7 @@ export default function Footer() {
                                     icon="home"
                                     className="me-2"
                                 />
-                                New York, NY 10012, US
+                                India
                             </p>
                             <p>
                                 <MDBIcon
@@ -130,7 +135,7 @@ export default function Footer() {
                                     icon="envelope"
                                     className="me-3"
                                 />
-                                info@example.com
+                                pankajbaliyan90@gmail.com
                             </p>
                             <p>
                                 <MDBIcon
@@ -138,7 +143,7 @@ export default function Footer() {
                                     icon="phone"
                                     className="me-3"
                                 />{' '}
-                                + 01 234 567 88
+                                + 91 xxxxx xxxxx
                             </p>
                             <p>
                                 <MDBIcon
@@ -146,7 +151,7 @@ export default function Footer() {
                                     icon="print"
                                     className="me-3"
                                 />{' '}
-                                + 01 234 567 89
+                                + 91 xxxxx xxxxx
                             </p>
                         </MDBCol>
                     </MDBRow>
@@ -157,9 +162,12 @@ export default function Footer() {
                 className="text-center p-4"
                 style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}
             >
-                © 2021 Copyright:
-                <Link className="fw-bold" to="https://mdbootstrap.com/">
-                    MDBootstrap.com
+                © {currentYear} Copyright:
+                <Link
+                    className="fw-bold"
+                    to="https://codex-portfolio.onrender.com/"
+                >
+                    CodeWithPankaj
                 </Link>
             </div>
         </MDBFooter>

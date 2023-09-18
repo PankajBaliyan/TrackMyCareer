@@ -1,2213 +1,637 @@
 import React from 'react';
-import {
-    MDBCard,
-    MDBCardBody,
-    MDBCardTitle,
-    MDBCardText,
-    MDBCardImage,
-    MDBBtn,
-    MDBRipple,
-} from 'mdb-react-ui-kit';
+import { Link } from 'react-router-dom';
 
 export default function App() {
     return (
-        <div id="parentDiv" className="d-flex">
-            <MDBCard className="childDiv">
-                <MDBRipple
-                    rippleColor="light"
-                    rippleTag="div"
-                    className="bg-image hover-overlay"
-                >
-                    <MDBCardImage
-                        src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
-                        fluid
-                        alt="..."
-                    />
-                    <a>
-                        <div
-                            className="mask"
-                            style={{
-                                backgroundColor: 'rgba(251, 251, 251, 0.15)',
-                            }}
-                        ></div>
-                    </a>
-                </MDBRipple>
-                <MDBCardBody>
-                    <MDBCardTitle>Card title</MDBCardTitle>
-                    <MDBCardText>
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                    </MDBCardText>
-                    <MDBBtn href="#">Button</MDBBtn>
-                </MDBCardBody>
-            </MDBCard>
-            <MDBCard className="childDiv">
-                <MDBRipple
-                    rippleColor="light"
-                    rippleTag="div"
-                    className="bg-image hover-overlay"
-                >
-                    <MDBCardImage
-                        src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
-                        fluid
-                        alt="..."
-                    />
-                    <a>
-                        <div
-                            className="mask"
-                            style={{
-                                backgroundColor: 'rgba(251, 251, 251, 0.15)',
-                            }}
-                        ></div>
-                    </a>
-                </MDBRipple>
-                <MDBCardBody>
-                    <MDBCardTitle>Card title</MDBCardTitle>
-                    <MDBCardText>
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                    </MDBCardText>
-                    <MDBBtn href="#">Button</MDBBtn>
-                </MDBCardBody>
-            </MDBCard>
-            <MDBCard className="childDiv">
-                <MDBRipple
-                    rippleColor="light"
-                    rippleTag="div"
-                    className="bg-image hover-overlay"
-                >
-                    <MDBCardImage
-                        src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
-                        fluid
-                        alt="..."
-                    />
-                    <a>
-                        <div
-                            className="mask"
-                            style={{
-                                backgroundColor: 'rgba(251, 251, 251, 0.15)',
-                            }}
-                        ></div>
-                    </a>
-                </MDBRipple>
-                <MDBCardBody>
-                    <MDBCardTitle>Card title</MDBCardTitle>
-                    <MDBCardText>
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                    </MDBCardText>
-                    <MDBBtn href="#">Button</MDBBtn>
-                </MDBCardBody>
-            </MDBCard>
-            <MDBCard className="childDiv">
-                <MDBRipple
-                    rippleColor="light"
-                    rippleTag="div"
-                    className="bg-image hover-overlay"
-                >
-                    <MDBCardImage
-                        src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
-                        fluid
-                        alt="..."
-                    />
-                    <a>
-                        <div
-                            className="mask"
-                            style={{
-                                backgroundColor: 'rgba(251, 251, 251, 0.15)',
-                            }}
-                        ></div>
-                    </a>
-                </MDBRipple>
-                <MDBCardBody>
-                    <MDBCardTitle>Card title</MDBCardTitle>
-                    <MDBCardText>
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                    </MDBCardText>
-                    <MDBBtn href="#">Button</MDBBtn>
-                </MDBCardBody>
-            </MDBCard>
-
-            <div
-                class="mkdf-row-grid-section-wrapper "
-                style={{'background-color':'#ebf0ff'}}
+        <div className="mkdf-blog-slider-holder mkdf-bs-carousel">
+            <ul
+                className=" mkdf-owl-slider owl-loaded "
+                style={{ visibility: 'visible' }}
             >
-                <div class="mkdf-row-grid-section">
-                    <div class="vc_row wpb_row vc_row-fluid vc_custom_1529912227534">
-                        <div class="wpb_column vc_column_container vc_col-sm-12">
-                            <div class="vc_column-inner vc_custom_1528731476402">
-                                <div class="wpb_wrapper">
-                                    <div class="mkdf-blog-slider-holder mkdf-bs-carousel">
-                                        <ul
-                                            class="mkdf-blog-slider mkdf-owl-slider owl-loaded owl-drag"
-                                            data-number-of-items="4"
-                                            data-slider-padding="no"
-                                            data-enable-navigation="no"
-                                            data-enable-pagination="yes"
-                                            style={{visibility: 'visible'}}
+                <div className="owl-stage-outer">
+                    <div className="owl-stage d-flex justify-content-center flex-wrap">
+                        <div
+                            className="owl-item cloned"
+                            style={{ width: '300px' }}
+                        >
+                            <li className="mkdf-blog-slider-item">
+                                <div className="mkdf-blog-slider-item-inner">
+                                    <div className="mkdf-item-image p-0">
+                                        <Link
+                                            itemProp="url"
+                                            to="/applicationTracker"
                                         >
-                                            <div class="owl-stage-outer">
-                                                <div
-                                                    class="owl-stage"
-                                                    style={{transform: 'translate3d(-1800px, 0px, 0px)', transition: 'all 0.6s ease 0s', width: '7200px'}}
+                                            <video
+                                                loading="lazy"
+                                                muted="muted"
+                                                src="/Assets/images/AITools/job-search-5811697-4848999.mp4"
+                                                type="video/mp4"
+                                                autoplay="autoplay"
+                                                loop="loop"
+                                                width={190}
+                                            ></video>{' '}
+                                        </Link>
+                                    </div>
+                                    <div className="mkdf-bli-content">
+                                        <h2
+                                            itemProp="name"
+                                            className="entry-title mkdf-post-title"
+                                        >
+                                            <Link
+                                                itemProp="url"
+                                                to="/applicationTracker"
+                                                title="Progression"
+                                            >
+                                                Job Application Tracker{' '}
+                                            </Link>
+                                        </h2>
+                                        <div className="mkdf-bli-excerpt">
+                                            <div className="mkdf-post-excerpt-holder">
+                                                <p
+                                                    itemProp="description"
+                                                    className="mkdf-post-excerpt"
                                                 >
-                                                    <div
-                                                        class="owl-item cloned"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/progression/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-7.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="d"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-7.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-7-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-7-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/progression/"
-                                                                            title="Progression"
-                                                                        >
-                                                                            Progression{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/progression/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item cloned"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/disconect-2/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-12.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="j"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-12.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-12-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-12-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/disconect-2/"
-                                                                            title="Disconect"
-                                                                        >
-                                                                            Disconect{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/disconect-2/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item cloned"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/integration/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-8.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="d"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-8.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-8-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-8-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/integration/"
-                                                                            title="Integration"
-                                                                        >
-                                                                            Integration{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/integration/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item cloned"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/positivity-2/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-11.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="x"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-11.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-11-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-11-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/positivity-2/"
-                                                                            title="Positivity"
-                                                                        >
-                                                                            Positivity{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/positivity-2/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item cloned"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/sleeping-2/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-9.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="x"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-9.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-9-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-9-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/sleeping-2/"
-                                                                            title="Sleeping"
-                                                                        >
-                                                                            Sleeping{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/sleeping-2/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item cloned"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/decoration/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-10.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="x"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-10.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-10-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-10-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/decoration/"
-                                                                            title="Decoration"
-                                                                        >
-                                                                            Decoration{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/decoration/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item active"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/disconect/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-sidebar-img-1.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="j"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-sidebar-img-1.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-sidebar-img-1-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-sidebar-img-1-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/disconect/"
-                                                                            title="Disconect"
-                                                                        >
-                                                                            Disconect{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/disconect/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item active"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/fast-test-2/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-2.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="j"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-2.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-2-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-2-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/fast-test-2/"
-                                                                            title="Positivity"
-                                                                        >
-                                                                            Positivity{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/fast-test-2/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/sleeping/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-3.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="l"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-3.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-3-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-3-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/sleeping/"
-                                                                            title="Sleeping"
-                                                                        >
-                                                                            Sleeping{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/sleeping/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/relationship/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-4.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="l"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-4.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-4-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-4-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/relationship/"
-                                                                            title="Relationship"
-                                                                        >
-                                                                            Relationship{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/relationship/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/skilled-team-2/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-6.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="d"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-6.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-6-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-6-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/skilled-team-2/"
-                                                                            title="Perfection"
-                                                                        >
-                                                                            Perfection{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/skilled-team-2/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/connection/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-5.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="d"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-5.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-5-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-5-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/connection/"
-                                                                            title="Connection"
-                                                                        >
-                                                                            Connection{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/connection/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/progression/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-7.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="d"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-7.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-7-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-7-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/progression/"
-                                                                            title="Progression"
-                                                                        >
-                                                                            Progression{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/progression/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/disconect-2/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-12.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="j"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-12.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-12-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-12-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/disconect-2/"
-                                                                            title="Disconect"
-                                                                        >
-                                                                            Disconect{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/disconect-2/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/integration/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-8.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="d"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-8.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-8-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-8-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/integration/"
-                                                                            title="Integration"
-                                                                        >
-                                                                            Integration{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/integration/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/positivity-2/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-11.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="x"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-11.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-11-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-11-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/positivity-2/"
-                                                                            title="Positivity"
-                                                                        >
-                                                                            Positivity{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/positivity-2/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/sleeping-2/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-9.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="x"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-9.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-9-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-9-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/sleeping-2/"
-                                                                            title="Sleeping"
-                                                                        >
-                                                                            Sleeping{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/sleeping-2/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/decoration/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-10.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="x"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-10.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-10-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-10-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/decoration/"
-                                                                            title="Decoration"
-                                                                        >
-                                                                            Decoration{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/decoration/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item cloned"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/disconect/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-sidebar-img-1.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="j"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-sidebar-img-1.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-sidebar-img-1-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-sidebar-img-1-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/disconect/"
-                                                                            title="Disconect"
-                                                                        >
-                                                                            Disconect{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/disconect/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item cloned"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/fast-test-2/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-2.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="j"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-2.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-2-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-2-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/fast-test-2/"
-                                                                            title="Positivity"
-                                                                        >
-                                                                            Positivity{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/fast-test-2/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item cloned"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/sleeping/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-3.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="l"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-3.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-3-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-3-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/sleeping/"
-                                                                            title="Sleeping"
-                                                                        >
-                                                                            Sleeping{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/sleeping/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item cloned"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/relationship/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-4.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="l"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-4.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-4-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/blog-slider-img-4-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/relationship/"
-                                                                            title="Relationship"
-                                                                        >
-                                                                            Relationship{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/relationship/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item cloned"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/skilled-team-2/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-6.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="d"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-6.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-6-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-6-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/skilled-team-2/"
-                                                                            title="Perfection"
-                                                                        >
-                                                                            Perfection{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/skilled-team-2/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                    <div
-                                                        class="owl-item cloned"
-                                                        style={{width: '300px'}}
-                                                    >
-                                                        <li class="mkdf-blog-slider-item">
-                                                            <div class="mkdf-blog-slider-item-inner">
-                                                                <div class="mkdf-item-image">
-                                                                    <a
-                                                                        itemprop="url"
-                                                                        href="https://foton.qodeinteractive.com/connection/"
-                                                                    >
-                                                                        <img
-                                                                            width="172"
-                                                                            height="172"
-                                                                            src="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-5.png"
-                                                                            class="attachment-full size-full"
-                                                                            alt="d"
-                                                                            decoding="async"
-                                                                            loading="lazy"
-                                                                            srcset="https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-5.png 172w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-5-150x150.png 150w, https://foton.qodeinteractive.com/wp-content/uploads/2018/06/home-1-team-5-100x100.png 100w"
-                                                                            sizes="(max-width: 172px) 100vw, 172px"
-                                                                        />{' '}
-                                                                    </a>
-                                                                </div>
-                                                                <div class="mkdf-bli-content">
-                                                                    <h2
-                                                                        itemprop="name"
-                                                                        class="entry-title mkdf-post-title"
-                                                                    >
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/connection/"
-                                                                            title="Connection"
-                                                                        >
-                                                                            Connection{' '}
-                                                                        </a>
-                                                                    </h2>
-                                                                    <div class="mkdf-bli-excerpt">
-                                                                        <div class="mkdf-post-excerpt-holder">
-                                                                            <p
-                                                                                itemprop="description"
-                                                                                class="mkdf-post-excerpt"
-                                                                            >
-                                                                                Lorem
-                                                                                ipsum
-                                                                                dolor
-                                                                                sit
-                                                                                amet,
-                                                                                conse
-                                                                                ctetuer
-                                                                                adi
-                                                                                pisci
-                                                                                elit,
-                                                                                sed
-                                                                                dia
-                                                                                nonu.{' '}
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="mkdf-post-info-bottom clearfix">
-                                                                    <div class="mkdf-post-read-more-button">
-                                                                        <a
-                                                                            itemprop="url"
-                                                                            href="https://foton.qodeinteractive.com/connection/"
-                                                                            target="_self"
-                                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
-                                                                        >
-                                                                            {' '}
-                                                                            <span class="mkdf-btn-text">
-                                                                                Read
-                                                                                More
-                                                                            </span>{' '}
-                                                                            <span
-                                                                                aria-hidden="true"
-                                                                                class="mkdf-icon-font-elegant arrow_right "
-                                                                            ></span>
-                                                                        </a>{' '}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </div>
-                                                </div>
+                                                    Job Application Tracker
+                                                    software efficiently manages
+                                                    and organizes your job
+                                                    applications, streamlining
+                                                    your job search.{' '}
+                                                </p>
                                             </div>
-                                            <div class="owl-nav disabled">
-                                                <button
-                                                    type="button"
-                                                    role="presentation"
-                                                    class="owl-prev"
-                                                >
-                                                    <span class="mkdf-prev-icon mkdf-icon-dripicons dripicon dripicons-chevron-left mkdf-icon-element"></span>
-                                                </button>
-                                                <button
-                                                    type="button"
-                                                    role="presentation"
-                                                    class="owl-next"
-                                                >
-                                                    <span class="mkdf-next-icon mkdf-icon-dripicons dripicon dripicons-chevron-right mkdf-icon-element"></span>
-                                                </button>
-                                            </div>
-                                            <div class="owl-dots">
-                                                <button
-                                                    role="button"
-                                                    class="owl-dot active"
-                                                >
-                                                    <span></span>
-                                                </button>
-                                                <button
-                                                    role="button"
-                                                    class="owl-dot"
-                                                >
-                                                    <span></span>
-                                                </button>
-                                                <button
-                                                    role="button"
-                                                    class="owl-dot"
-                                                >
-                                                    <span></span>
-                                                </button>
-                                                <button
-                                                    role="button"
-                                                    class="owl-dot"
-                                                >
-                                                    <span></span>
-                                                </button>
-                                                <button
-                                                    role="button"
-                                                    class="owl-dot"
-                                                >
-                                                    <span></span>
-                                                </button>
-                                                <button
-                                                    role="button"
-                                                    class="owl-dot"
-                                                >
-                                                    <span></span>
-                                                </button>
-                                            </div>
-                                        </ul>
+                                        </div>
+                                    </div>
+                                    <div className="mkdf-post-info-bottom clearfix">
+                                        <div className="mkdf-post-read-more-button">
+                                            <Link
+                                                itemProp="url"
+                                                to="/applicationTracker"
+                                                target="_self"
+                                                className="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
+                                            >
+                                                {' '}
+                                                <span className="mkdf-btn-text">
+                                                    Open tool
+                                                </span>{' '}
+                                                <span
+                                                    aria-hidden="true"
+                                                    className="fa fa-arrow-right "
+                                                ></span>
+                                            </Link>{' '}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </li>
                         </div>
+
+                        <div
+                            className="owl-item cloned"
+                            style={{ width: '300px' }}
+                        >
+                            <li className="mkdf-blog-slider-item">
+                                <div className="mkdf-blog-slider-item-inner">
+                                    <div className="mkdf-item-image p-0">
+                                        <a itemProp="url" href="#">
+                                            <video
+                                                loading="lazy"
+                                                muted="muted"
+                                                src="/Assets/images/AITools/mailbox-4838063-4025835.mp4"
+                                                type="video/mp4"
+                                                autoplay="autoplay"
+                                                loop="loop"
+                                                width={190}
+                                            ></video>{' '}
+                                        </a>
+                                    </div>
+                                    <div className="mkdf-bli-content">
+                                        <h2
+                                            itemProp="name"
+                                            className="entry-title mkdf-post-title"
+                                        >
+                                            <Link
+                                                itemProp="url"
+                                                to="/email"
+                                                title="Sleeping"
+                                            >
+                                                Professional Mail Generator{' '}
+                                            </Link>
+                                        </h2>
+                                        <div className="mkdf-bli-excerpt">
+                                            <div className="mkdf-post-excerpt-holder">
+                                                <p
+                                                    itemProp="description"
+                                                    className="mkdf-post-excerpt"
+                                                >
+                                                    The Professional Mail
+                                                    Generator simplifies email
+                                                    creation for a polished and
+                                                    personalized communication
+                                                    experience.{' '}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mkdf-post-info-bottom clearfix">
+                                        <div className="mkdf-post-read-more-button">
+                                            <Link
+                                                itemProp="url"
+                                                to="/email"
+                                                target="_self"
+                                                className="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
+                                            >
+                                                {' '}
+                                                <span className="mkdf-btn-text">
+                                                    Open Tool
+                                                </span>{' '}
+                                                <span
+                                                    aria-hidden="true"
+                                                    className="fa fa-arrow-right "
+                                                ></span>
+                                            </Link>{' '}
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+
+                        <div
+                            className="owl-item cloned"
+                            style={{ width: '300px' }}
+                        >
+                            <li className="mkdf-blog-slider-item">
+                                <div className="mkdf-blog-slider-item-inner">
+                                    <div className="mkdf-item-image">
+                                        <a itemProp="url" href="#">
+                                            <video
+                                                loading="lazy"
+                                                muted="muted"
+                                                src="/Assets/images/AITools/letter-6838516-5619595.mp4"
+                                                type="video/mp4"
+                                                autoplay="autoplay"
+                                                loop="loop"
+                                                width={100}
+                                            ></video>{' '}
+                                        </a>
+                                    </div>
+                                    <div className="mkdf-bli-content">
+                                        <h2
+                                            itemProp="name"
+                                            className="entry-title mkdf-post-title"
+                                        >
+                                            <a
+                                                itemProp="url"
+                                                href="#"
+                                                title="Decoration"
+                                            >
+                                                Cover Letter Generator{' '}
+                                            </a>
+                                        </h2>
+                                        <div className="mkdf-bli-excerpt">
+                                            <div className="mkdf-post-excerpt-holder">
+                                                <p
+                                                    itemProp="description"
+                                                    className="mkdf-post-excerpt"
+                                                >
+                                                    The Cover Letter Generator
+                                                    automates the process,
+                                                    crafting compelling cover
+                                                    letters tailored to your job
+                                                    applications.{' '}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mkdf-post-info-bottom clearfix">
+                                        <div className="mkdf-post-read-more-button">
+                                            <a
+                                                itemProp="url"
+                                                href="#"
+                                                target="_self"
+                                                className="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
+                                            >
+                                                {' '}
+                                                <span className="mkdf-btn-text">
+                                                    Open Tool
+                                                </span>{' '}
+                                                <span
+                                                    aria-hidden="true"
+                                                    className="fa fa-arrow-right "
+                                                ></span>
+                                            </a>{' '}
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+
+                        <div className="owl-item" style={{ width: '300px' }}>
+                            <li className="mkdf-blog-slider-item">
+                                <div className="mkdf-blog-slider-item-inner">
+                                    <div className="mkdf-item-image p-0">
+                                        <a itemProp="url" href="#">
+                                            <video
+                                                loading="lazy"
+                                                muted="muted"
+                                                src="/Assets/images/AITools/electric-genertator-7367352-5962867.mp4"
+                                                type="video/mp4"
+                                                autoplay="autoplay"
+                                                loop="loop"
+                                                width={164}
+                                            ></video>{' '}
+                                        </a>
+                                    </div>
+                                    <div className="mkdf-bli-content">
+                                        <h2
+                                            itemProp="name"
+                                            className="entry-title mkdf-post-title"
+                                        >
+                                            <a
+                                                itemProp="url"
+                                                href="#"
+                                                title="Relationship"
+                                            >
+                                                Professional Post Generator{' '}
+                                            </a>
+                                        </h2>
+                                        <div className="mkdf-bli-excerpt">
+                                            <div className="mkdf-post-excerpt-holder">
+                                                <p
+                                                    itemProp="description"
+                                                    className="mkdf-post-excerpt"
+                                                >
+                                                    The Professional Post
+                                                    Generator simplifies content
+                                                    creation, enabling you to
+                                                    craft engaging and impactful
+                                                    social media posts
+                                                    effortlessly.{' '}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mkdf-post-info-bottom clearfix">
+                                        <div className="mkdf-post-read-more-button">
+                                            <a
+                                                itemProp="url"
+                                                href="#"
+                                                target="_self"
+                                                className="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
+                                            >
+                                                {' '}
+                                                <span className="mkdf-btn-text">
+                                                    Open Tool
+                                                </span>{' '}
+                                                <span
+                                                    aria-hidden="true"
+                                                    className="fa fa-arrow-right "
+                                                ></span>
+                                            </a>{' '}
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+
+                        <div className="owl-item" style={{ width: '300px' }}>
+                            <li className="mkdf-blog-slider-item">
+                                <div className="mkdf-blog-slider-item-inner">
+                                    <div
+                                        className="mkdf-item-image"
+                                        style={{ padding: '39px 0px 0px 0px' }}
+                                    >
+                                        <a itemProp="url" href="#">
+                                            <video
+                                                loading="lazy"
+                                                muted="muted"
+                                                src="/Assets/images/AITools/linkedin-5704169-4740779.mp4"
+                                                type="video/mp4"
+                                                autoplay="autoplay"
+                                                loop="loop"
+                                                width={150}
+                                            ></video>{' '}
+                                        </a>
+                                    </div>
+                                    <div className="mkdf-bli-content">
+                                        <h2
+                                            itemProp="name"
+                                            className="entry-title mkdf-post-title"
+                                        >
+                                            <a
+                                                itemProp="url"
+                                                href="#"
+                                                title="Perfection"
+                                            >
+                                                LinkedIn Headline Generator{' '}
+                                            </a>
+                                        </h2>
+                                        <div className="mkdf-bli-excerpt">
+                                            <div className="mkdf-post-excerpt-holder">
+                                                <p
+                                                    itemProp="description"
+                                                    className="mkdf-post-excerpt"
+                                                >
+                                                    The LinkedIn Headline
+                                                    Generator helps you create
+                                                    attention-grabbing LinkedIn
+                                                    headlines that enhance your
+                                                    professional profile.{' '}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mkdf-post-info-bottom clearfix">
+                                        <div className="mkdf-post-read-more-button">
+                                            <a
+                                                itemProp="url"
+                                                href="#"
+                                                target="_self"
+                                                className="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
+                                            >
+                                                {' '}
+                                                <span className="mkdf-btn-text">
+                                                    Open Tool
+                                                </span>{' '}
+                                                <span
+                                                    aria-hidden="true"
+                                                    className="fa fa-arrow-right "
+                                                ></span>
+                                            </a>{' '}
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+
+                        <div className="owl-item" style={{ width: '300px' }}>
+                            <li className="mkdf-blog-slider-item">
+                                <div className="mkdf-blog-slider-item-inner">
+                                    <div className="mkdf-item-image p-0">
+                                        <a itemProp="url" href="#">
+                                            <video
+                                                loading="lazy"
+                                                muted="muted"
+                                                src="/Assets/images/AITools/about-7041861-5728681.mp4"
+                                                type="video/mp4"
+                                                autoplay="autoplay"
+                                                loop="loop"
+                                                width={189}
+                                            ></video>{' '}
+                                        </a>
+                                    </div>
+                                    <div className="mkdf-bli-content">
+                                        <h2
+                                            itemProp="name"
+                                            className="entry-title mkdf-post-title"
+                                        >
+                                            <a
+                                                itemProp="url"
+                                                href="#"
+                                                title="Connection"
+                                            >
+                                                LinkedIn About Generator{' '}
+                                            </a>
+                                        </h2>
+                                        <div className="mkdf-bli-excerpt">
+                                            <div className="mkdf-post-excerpt-holder">
+                                                <p
+                                                    itemProp="description"
+                                                    className="mkdf-post-excerpt"
+                                                >
+                                                    The LinkedIn About Generator
+                                                    crafts compelling 'About'
+                                                    sections, making your
+                                                    LinkedIn profile stand out
+                                                    and resonate professionally.{' '}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mkdf-post-info-bottom clearfix">
+                                        <div className="mkdf-post-read-more-button">
+                                            <a
+                                                itemProp="url"
+                                                href="#"
+                                                target="_self"
+                                                className="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
+                                            >
+                                                {' '}
+                                                <span className="mkdf-btn-text">
+                                                    Open Tool
+                                                </span>{' '}
+                                                <span
+                                                    aria-hidden="true"
+                                                    className="fa fa-arrow-right "
+                                                ></span>
+                                            </a>{' '}
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+
+                        <div className="owl-item" style={{ width: '300px' }}>
+                            <li className="mkdf-blog-slider-item">
+                                <div className="mkdf-blog-slider-item-inner">
+                                    <div className="mkdf-item-image">
+                                        <a itemProp="url" href="#">
+                                            <video
+                                                loading="lazy"
+                                                muted="muted"
+                                                src="/Assets/images/AITools/man-working-on-maintenance-service-5093451-4257985.mp4"
+                                                type="video/mp4"
+                                                autoplay="autoplay"
+                                                loop="loop"
+                                                width={145}
+                                            ></video>{' '}
+                                        </a>
+                                    </div>
+                                    <div className="mkdf-bli-content">
+                                        <h2
+                                            itemProp="name"
+                                            className="entry-title mkdf-post-title"
+                                        >
+                                            <a
+                                                itemProp="url"
+                                                href="#"
+                                                title="Disconect"
+                                            >
+                                                More Tools{' '}
+                                            </a>
+                                        </h2>
+                                        <div className="mkdf-bli-excerpt">
+                                            <div className="mkdf-post-excerpt-holder">
+                                                <p
+                                                    itemProp="description"
+                                                    className="mkdf-post-excerpt"
+                                                >
+                                                    Explore our suite of More
+                                                    Tools designed to empower
+                                                    your career and enhance your
+                                                    professional journey.{' '}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mkdf-post-info-bottom clearfix">
+                                        <div className="mkdf-post-read-more-button">
+                                            <a
+                                                itemProp="url"
+                                                href="#"
+                                                target="_self"
+                                                className="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
+                                            >
+                                                {' '}
+                                                <span className="mkdf-btn-text">
+                                                    Comming Soon
+                                                </span>{' '}
+                                                <span
+                                                    aria-hidden="true"
+                                                    className="fa fa-arrow-right "
+                                                ></span>
+                                            </a>{' '}
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+
+                        {/* <div className="owl-item" style={{ width: '300px' }}>
+                            <li className="mkdf-blog-slider-item">
+                                <div className="mkdf-blog-slider-item-inner">
+                                    <div className="mkdf-item-image">
+                                        <a
+                                            itemProp="url"
+                                            href="#"
+                                        >
+                                            <video
+                                                loading="lazy"
+                                                muted="muted"
+                                                src="/Assets/images/AITools/linkedin-5704169-4740779.mp4"
+                                                type="video/mp4"
+                                                autoplay="autoplay"
+                                                loop="loop"
+                                                width={150}
+                                            ></video>{' '}
+                                        </a>
+                                    </div>
+                                    <div className="mkdf-bli-content">
+                                        <h2
+                                            itemProp="name"
+                                            className="entry-title mkdf-post-title"
+                                        >
+                                            <a
+                                                itemProp="url"
+                                                href="#"
+                                                title="Integration"
+                                            >
+                                                Integration{' '}
+                                            </a>
+                                        </h2>
+                                        <div className="mkdf-bli-excerpt">
+                                            <div className="mkdf-post-excerpt-holder">
+                                                <p
+                                                    itemProp="description"
+                                                    className="mkdf-post-excerpt"
+                                                >
+                                                    Lorem ipsum dolor sit amet,
+                                                    conse ctetuer adi pisci
+                                                    elit, sed dia nonu.{' '}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mkdf-post-info-bottom clearfix">
+                                        <div className="mkdf-post-read-more-button">
+                                            <a
+                                                itemProp="url"
+                                                href="#"
+                                                target="_self"
+                                                className="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
+                                            >
+                                                {' '}
+                                                <span className="mkdf-btn-text">
+                                                    Open Tool
+                                                </span>{' '}
+                                                <span
+                                                    aria-hidden="true"
+                                                    className="fa fa-arrow-right "
+                                                ></span>
+                                            </a>{' '}
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div> */}
+
+                        {/* <div className="owl-item" style={{ width: '300px' }}>
+                            <li className="mkdf-blog-slider-item">
+                                <div className="mkdf-blog-slider-item-inner">
+                                    <div className="mkdf-item-image">
+                                        <a
+                                            itemProp="url"
+                                            href="#"
+                                        >
+                                            <video
+                                                loading="lazy"
+                                                muted="muted"
+                                                src="/Assets/images/AITools/linkedin-5704169-4740779.mp4"
+                                                type="video/mp4"
+                                                autoplay="autoplay"
+                                                loop="loop"
+                                                width={150}
+                                            ></video>{' '}
+                                        </a>
+                                    </div>
+                                    <div className="mkdf-bli-content">
+                                        <h2
+                                            itemProp="name"
+                                            className="entry-title mkdf-post-title"
+                                        >
+                                            <a
+                                                itemProp="url"
+                                                href="#"
+                                                title="Positivity"
+                                            >
+                                                Positivity{' '}
+                                            </a>
+                                        </h2>
+                                        <div className="mkdf-bli-excerpt">
+                                            <div className="mkdf-post-excerpt-holder">
+                                                <p
+                                                    itemProp="description"
+                                                    className="mkdf-post-excerpt"
+                                                >
+                                                    Lorem ipsum dolor sit amet,
+                                                    conse ctetuer adi pisci
+                                                    elit, sed dia nonu.{' '}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mkdf-post-info-bottom clearfix">
+                                        <div className="mkdf-post-read-more-button">
+                                            <a
+                                                itemProp="url"
+                                                href="#"
+                                                target="_self"
+                                                className="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
+                                            >
+                                                {' '}
+                                                <span className="mkdf-btn-text">
+                                                    Open Tool
+                                                </span>{' '}
+                                                <span
+                                                    aria-hidden="true"
+                                                    className="fa fa-arrow-right "
+                                                ></span>
+                                            </a>{' '}
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div> */}
                     </div>
                 </div>
-            </div>
+            </ul>
         </div>
     );
 }
