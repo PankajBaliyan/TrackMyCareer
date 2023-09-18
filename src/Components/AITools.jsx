@@ -17,7 +17,10 @@ export default function App() {
                             <li className="mkdf-blog-slider-item">
                                 <div className="mkdf-blog-slider-item-inner">
                                     <div className="mkdf-item-image p-0">
-                                        <a itemProp="url" href="#">
+                                        <Link
+                                            itemProp="url"
+                                            to="/applicationTracker"
+                                        >
                                             <video
                                                 loading="lazy"
                                                 muted="muted"
@@ -27,20 +30,20 @@ export default function App() {
                                                 loop="loop"
                                                 width={190}
                                             ></video>{' '}
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="mkdf-bli-content">
                                         <h2
                                             itemProp="name"
                                             className="entry-title mkdf-post-title"
                                         >
-                                            <a
+                                            <Link
                                                 itemProp="url"
-                                                href="#"
+                                                to="/applicationTracker"
                                                 title="Progression"
                                             >
                                                 Job Application Tracker{' '}
-                                            </a>
+                                            </Link>
                                         </h2>
                                         <div className="mkdf-bli-excerpt">
                                             <div className="mkdf-post-excerpt-holder">
@@ -59,9 +62,9 @@ export default function App() {
                                     </div>
                                     <div className="mkdf-post-info-bottom clearfix">
                                         <div className="mkdf-post-read-more-button">
-                                            <a
+                                            <Link
                                                 itemProp="url"
-                                                href="#"
+                                                to="/applicationTracker"
                                                 target="_self"
                                                 className="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-icon mkdf-blog-list-button"
                                             >
@@ -73,7 +76,7 @@ export default function App() {
                                                     aria-hidden="true"
                                                     className="fa fa-arrow-right "
                                                 ></span>
-                                            </a>{' '}
+                                            </Link>{' '}
                                         </div>
                                     </div>
                                 </div>

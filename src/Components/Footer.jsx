@@ -62,7 +62,10 @@ export default function Footer() {
                                 Products
                             </h6>
                             <p>
-                                <Link to="#!" className="text-reset">
+                                <Link
+                                    to="/applicationTracker"
+                                    className="text-reset"
+                                >
                                     Job Application's Tracker
                                 </Link>
                             </p>
